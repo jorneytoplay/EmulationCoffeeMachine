@@ -1,8 +1,7 @@
 package CoffeeMachine.mode.User;
 
-import CoffeeMachine.TechnicalPart.Shaper;
-import CoffeeMachine.mode.MakeCoffee;
-import CoffeeMachine.mode.ShowActionsList;
+import CoffeeMachine.ProcessesMakingCoffee.Shaper;
+import CoffeeMachine.ProcessesMakingCoffee.ShowActionsList;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -22,10 +21,10 @@ public class UserPanel {
         System.out.println("...Choose coffee...");
         do {
             showActionsList.list(false);
-            System.out.println("Coffee:");
+            System.out.print("Coffee:");
             int numberCoffee = in.nextInt();
             System.out.println("...Choose volume...\n1.0,3\n2.0,5\n3.1,0");
-            System.out.println("Volume:");
+            System.out.print("Volume:");
             numberVolume = in.nextInt();
             shaper.shapeOfOrder(numberCoffee,numberVolume);
         } while (!exit);

@@ -11,8 +11,6 @@ import java.util.Properties;
 import java.util.Scanner;
 
 public class CoffeeMachine {
-    FileInputStream in = new FileInputStream("C:\\Users\\71376160\\IdeaProjects\\EmulationCoffeeMachine\\src\\CoffeeMachine\\resources.properties");
-    Properties prop = new Properties();
     Scanner scanner = new Scanner(System.in);
     AdministratorMode admin = new AdministratorMode();
     AdminPanel adminPanel = new AdminPanel();
@@ -28,20 +26,22 @@ public class CoffeeMachine {
             System.out.println("What do you want? (Select number)\n" +
                     "1.Make coffee\n" +
                     "2.Administrator Mode");
+            System.out.print("Your choice:");
             choose = scanner.nextLine();
+
             if (choose.equals("1")) {
                 System.out.println("What kind of coffee do you want");
+                userPanel.startPanel();
             } else if (choose.equals("2")) {
                 adminMode = admin.passwordCheck();
             } else {
                 System.out.println("Try again");
             }
+
             if(adminMode){
-                adminPanel.startPanel();
+                adminPanel.startPanel();//Если пользватель ввёл верный пароль то впустить в режим администратора ( ДОРАБОТАТЬ )
             }
-            else { //ПОПРАВИТЬ ЦИКЛ БЕСОНЕЧЕН
-                userPanel.startPanel();
-            }
+
         }
     }
 

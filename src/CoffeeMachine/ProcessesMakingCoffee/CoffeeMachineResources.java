@@ -1,4 +1,4 @@
-package CoffeeMachine.TechnicalPart;
+package CoffeeMachine.ProcessesMakingCoffee;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -6,12 +6,13 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Properties;
 
-public class CoffeeMachineResources {
+public class CoffeeMachineResources { //Класс конструктор выводящий список ресурсов
     Properties prop = new Properties();
     HashMap<String,Integer> resources = new HashMap<>();
     FileInputStream in = new FileInputStream("C:\\Users\\71376160\\IdeaProjects\\EmulationCoffeeMachine\\src\\CoffeeMachine\\resources.properties");
     public void showsResources() throws IOException {
         prop.load(in);
+        System.out.println("...Number of resources...");
         System.out.println("Milk:"+prop.getProperty("milk")+"L");
         System.out.println("Cream:"+prop.getProperty("cream")+"L");
         System.out.println("Compressed air:"+prop.getProperty("compressed_air")+"m³");

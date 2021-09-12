@@ -1,6 +1,6 @@
 package CoffeeMachine.mode.Admin;
 
-import CoffeeMachine.mode.ShowActionsList;
+import CoffeeMachine.ProcessesMakingCoffee.ShowActionsList;
 
 import java.util.Scanner;
 

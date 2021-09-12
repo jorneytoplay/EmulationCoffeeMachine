@@ -1,11 +1,10 @@
-package CoffeeMachine.mode;
-
-import CoffeeMachine.TechnicalPart.LoadingCoffeeList;
+package CoffeeMachine.ProcessesMakingCoffee;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 public class MakeCoffee {
     Properties prop = new Properties();
@@ -14,11 +13,15 @@ public class MakeCoffee {
     public MakeCoffee() throws FileNotFoundException {
     }
 
-    public void make(String coffeeName,int volume) throws IOException {
+    public void make(String coffeeName,int price) throws IOException {
         prop.load(in);
-        String instruction="Coffee:"+coffeeName+" Volume:"+volume;
-        if ("Латте".equals(coffeeName)) {
-            System.out.println(instruction);
+        System.out.println("Coffee:"+coffeeName+" Price:"+price+"₽");
+        System.out.println("...Please wait, the coffee is done ...");
+        try {
+            TimeUnit.SECONDS.sleep(3);
+            System.out.println("Profit!");
+        } catch (InterruptedException e) {
+            System.out.println("Something went wrong while making coffee");
         }
     }
     public void eatingUpResources(double milk,double cream, double compressedAir,double coffee){

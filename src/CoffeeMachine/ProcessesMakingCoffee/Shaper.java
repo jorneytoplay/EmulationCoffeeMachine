@@ -1,12 +1,10 @@
-package CoffeeMachine.TechnicalPart;
-
-import CoffeeMachine.mode.MakeCoffee;
+package CoffeeMachine.ProcessesMakingCoffee;
 
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class Shaper extends LoadingCoffeeList{
+public class Shaper extends LoadingCoffeeList { //Класс-сборщик, достающий наименование кофе и ведёт подсчёт затрат денег и ресурсов
     MakeCoffee makeCoffee = new MakeCoffee();
     double milk,cream,compressedAir,coffee;
     public Shaper() throws FileNotFoundException {

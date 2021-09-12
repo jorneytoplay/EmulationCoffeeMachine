@@ -1,6 +1,5 @@
-package CoffeeMachine.mode;
+package CoffeeMachine.ProcessesMakingCoffee;
 
-import CoffeeMachine.TechnicalPart.LoadingCoffeeList;
 import CoffeeMachine.mode.Admin.AdminActions;
 
 import java.lang.reflect.Method;
