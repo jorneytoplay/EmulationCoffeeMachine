@@ -1,6 +1,5 @@
 package CoffeeMachine.mode.Admin;
 
-import CoffeeMachine.LoadingCoffeeList;
 import CoffeeMachine.mode.ShowActionsList;
 
 import java.util.Scanner;
@@ -9,15 +8,14 @@ public class AdminPanel {
     AdministratorMode administratorMode = new AdministratorMode();
     ShowActionsList showActionsList = new ShowActionsList();
     Scanner in = new Scanner(System.in);
-    private int chooseAdmin = 0;
     boolean exit = false;
     public void startPanel(){
         System.out.println("...Take action...");
-        for(;;) {
-            showActionsList.list(true, loadingCoffeeList);
+        do {
+            showActionsList.list(true);
             System.out.println("0.Exit");
-            chooseAdmin = in.nextInt();
-            switch (chooseAdmin){
+            int chooseAdmin = in.nextInt();
+            switch (chooseAdmin) {
                 case 1:
 
                     break;
@@ -31,7 +29,6 @@ public class AdminPanel {
                     exit = true;
                     break;
             }
-            if(exit)break;
-        }
+        } while (!exit);
     }
 }

@@ -1,15 +1,10 @@
 package CoffeeMachine.mode.Admin;
 
-import CoffeeMachine.CoffeeMachine;
-import CoffeeMachine.mode.Admin.AdminActions;
-import CoffeeMachine.mode.ShowActionsList;
-
 import java.lang.reflect.Method;
 import java.util.Scanner;
 
 public class AdministratorMode implements AdminActions {
     Scanner in = new Scanner(System.in);
-  //  CoffeeMachine coffeeMachine = new CoffeeMachine();
     private Integer pin=3352, pinIn= null;
 
     public boolean passwordCheck(){

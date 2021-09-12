@@ -1,17 +1,15 @@
 package CoffeeMachine.mode;
 
-import CoffeeMachine.LoadingCoffeeList;
+import CoffeeMachine.TechnicalPart.LoadingCoffeeList;
 import CoffeeMachine.mode.Admin.AdminActions;
 
-import java.io.FileInputStream;
 import java.lang.reflect.Method;
-import java.util.Properties;
+import java.util.Set;
 
-public class ShowActionsList {
+public class ShowActionsList extends LoadingCoffeeList {
     int cnt=1;
-    FileInputStream fis;
-    Properties property = new Properties();
-    public void list(boolean admin, LoadingCoffeeList loadingCoffeeList){
+    public void list(boolean admin){
+        loadCoffee();
         if(admin){
             Class<AdminActions> personClass = AdminActions.class;
             Method[] methods = personClass.getDeclaredMethods();
@@ -23,7 +21,17 @@ public class ShowActionsList {
             cnt=1;
         }
         else {
-
+            Set<String> keys = coffeeList.keySet();
+            for(Object key: keys){
+                System.out.println(cnt+"."+key + ": " + coffeeList.get(key));
+                cnt++;
+            }
+            cnt=1;
         }
+    }
+
+    public void getRes(){
+        loadCoffee();
+
     }
 }
