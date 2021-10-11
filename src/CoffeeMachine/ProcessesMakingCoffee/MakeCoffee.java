@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class MakeCoffee {
     Properties prop = new Properties();
-    FileInputStream in = new FileInputStream("C:\\Users\\71376160\\IdeaProjects\\EmulationCoffeeMachine\\src\\CoffeeMachine\\resources.properties");
+    FileInputStream in = new FileInputStream("resources/resources.properties");
 
     public MakeCoffee() throws FileNotFoundException {
     }
@@ -67,7 +67,7 @@ public class MakeCoffee {
      * @param p - machine resource data
      */
     public void saveProperties(Properties p) throws IOException {
-        FileOutputStream fr = new FileOutputStream("C:\\Users\\71376160\\IdeaProjects\\EmulationCoffeeMachine\\src\\CoffeeMachine\\resources.properties");
+        FileOutputStream fr = new FileOutputStream("resources/resources.properties");
         p.store(fr, "Properties");
         fr.close();
     }

@@ -40,10 +40,11 @@ public class CoffeeMachine {
             } else {
                 System.out.println("Try again");
             }
-            //If the user entered the correct password, then let him into the administrator mode (REFINE)
-            if (adminMode) {
-                adminPanel.startPanel();
-            }
+
+            //TODO
+            // if (adminMode) {
+            //    adminPanel.startPanel();
+            // }
 
         }
     }

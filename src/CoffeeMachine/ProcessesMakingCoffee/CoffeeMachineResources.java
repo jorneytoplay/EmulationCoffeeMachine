@@ -12,7 +12,7 @@ import java.util.Properties;
 public class CoffeeMachineResources { //Класс конструктор выводящий список ресурсов
     Properties prop = new Properties();
     HashMap<String, Integer> resources = new HashMap<>();
-    FileInputStream in = new FileInputStream("C:\\Users\\71376160\\IdeaProjects\\EmulationCoffeeMachine\\src\\CoffeeMachine\\resources.properties");
+    FileInputStream in = new FileInputStream("resources/resources.properties");
 
     public void showsResources() throws IOException {
         prop.load(in);
@@ -25,6 +25,7 @@ public class CoffeeMachineResources { //Класс конструктор выв
 
     public CoffeeMachineResources() throws FileNotFoundException {
     }
+    //TODO
     //  public HashMap getResources() throws IOException {
     //      prop.load(in);
     //      prop.put("Milk",prop.getProperty("milk"));
