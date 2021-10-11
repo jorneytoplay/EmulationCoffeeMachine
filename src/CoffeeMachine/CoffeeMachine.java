@@ -4,10 +4,8 @@ import CoffeeMachine.mode.Admin.AdminPanel;
 import CoffeeMachine.mode.Admin.AdministratorMode;
 import CoffeeMachine.mode.User.UserPanel;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Properties;
 import java.util.Scanner;
 
 public class CoffeeMachine {
@@ -15,14 +13,14 @@ public class CoffeeMachine {
     AdministratorMode admin = new AdministratorMode();
     AdminPanel adminPanel = new AdminPanel();
     UserPanel userPanel = new UserPanel();
-    String choose=null;
+    String choose = null;
     private boolean adminMode = false;
 
     public CoffeeMachine() throws FileNotFoundException {
     }
 
     public void start() throws IOException {
-        for(;;){
+        while (true){
             System.out.println("What do you want? (Select number)\n" +
                     "1.Make coffee\n" +
                     "2.Administrator Mode");
@@ -38,7 +36,7 @@ public class CoffeeMachine {
                 System.out.println("Try again");
             }
 
-            if(adminMode){
+            if (adminMode) {
                 adminPanel.startPanel();//Если пользватель ввёл верный пароль то впустить в режим администратора ( ДОРАБОТАТЬ )
             }
 

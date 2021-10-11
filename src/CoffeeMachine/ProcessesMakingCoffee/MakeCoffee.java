@@ -1,7 +1,5 @@
 package CoffeeMachine.ProcessesMakingCoffee;
 
-import CoffeeMachine.CoffeeMachine;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -12,13 +10,13 @@ import java.util.concurrent.TimeUnit;
 public class MakeCoffee {
     Properties prop = new Properties();
     FileInputStream in = new FileInputStream("C:\\Users\\71376160\\IdeaProjects\\EmulationCoffeeMachine\\src\\CoffeeMachine\\resources.properties");
-  //  FileOutputStream out = new FileOutputStream("C:\\Users\\71376160\\IdeaProjects\\EmulationCoffeeMachine\\src\\CoffeeMachine\\resources.properties");
+
     public MakeCoffee() throws FileNotFoundException {
     }
 
-    public void make(String coffeeName,int price) throws IOException {
+    public void make(String coffeeName, int price) throws IOException {
         prop.load(in);
-        System.out.println("Coffee:"+coffeeName+" Price:"+price+"₽");
+        System.out.println("Coffee:" + coffeeName + " Price:" + price + "₽");
         System.out.println("...Please wait, the coffee is done ...");
         try {
             TimeUnit.SECONDS.sleep(3);
@@ -27,14 +25,15 @@ public class MakeCoffee {
             System.out.println("Something went wrong while making coffee");
         }
     }
-    public void eatingUpResources(double milk,double cream, double compressedAir,double coffee) throws FileNotFoundException {
+
+    public void eatingUpResources(double milk, double cream, double compressedAir, double coffee) throws FileNotFoundException {
         CoffeeMachineResources coffeeMachineResources = new CoffeeMachineResources();
         try {
             prop.load(in);
-            Double milk_after = Double.parseDouble(prop.getProperty("milk"))-milk;
-            Double cream_after = Double.parseDouble(prop.getProperty("cream"))-cream;
-            Double compressedAir_after = Double.parseDouble(prop.getProperty("compressed_air"))-compressedAir;
-            Double coffee_after = Double.parseDouble(prop.getProperty("coffee"))-coffee;
+            Double milk_after = Double.parseDouble(prop.getProperty("milk")) - milk;
+            Double cream_after = Double.parseDouble(prop.getProperty("cream")) - cream;
+            Double compressedAir_after = Double.parseDouble(prop.getProperty("compressed_air")) - compressedAir;
+            Double coffee_after = Double.parseDouble(prop.getProperty("coffee")) - coffee;
             prop.setProperty("milk", String.valueOf(milk_after));
             prop.setProperty("cream", String.valueOf(cream_after));
             prop.setProperty("compressed_air", String.valueOf(compressedAir_after));
@@ -47,8 +46,8 @@ public class MakeCoffee {
             e.printStackTrace();
         }
     }
-    public void saveProperties(Properties p) throws IOException
-    {
+
+    public void saveProperties(Properties p) throws IOException {
         FileOutputStream fr = new FileOutputStream("C:\\Users\\71376160\\IdeaProjects\\EmulationCoffeeMachine\\src\\CoffeeMachine\\resources.properties");
         p.store(fr, "Properties");
         fr.close();

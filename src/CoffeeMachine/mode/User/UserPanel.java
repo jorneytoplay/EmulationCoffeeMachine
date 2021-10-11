@@ -26,7 +26,7 @@ public class UserPanel {
             System.out.println("...Choose volume...\n1.0,3\n2.0,5\n3.1,0");
             System.out.print("Volume:");
             numberVolume = in.nextInt();
-            shaper.shapeOfOrder(numberCoffee,numberVolume);
+            shaper.shapeOfOrder(numberCoffee, numberVolume);
         } while (!exit);
     }
 }

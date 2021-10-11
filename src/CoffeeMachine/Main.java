@@ -6,7 +6,7 @@ import CoffeeMachine.TechnicalPart.TechnicalScanner;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-public class StartWorking {
+public class Main {
 
     public static void main(String[] args) throws IOException {
         CoffeeMachineResources specifications = new CoffeeMachineResources();

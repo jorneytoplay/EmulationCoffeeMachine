@@ -6,14 +6,15 @@ import java.io.IOException;
 
 public class Shaper extends LoadingCoffeeList { //Класс-сборщик, достающий наименование кофе и ведёт подсчёт затрат денег и ресурсов
     MakeCoffee makeCoffee = new MakeCoffee();
+
     public Shaper() throws FileNotFoundException {
     }
 
-    public void shapeOfOrder(int numberCoffee,int volume ) throws IOException {
+    public void shapeOfOrder(int numberCoffee, int volume) throws IOException {
         loadCoffee();
         int price;
-        String coffeeName=null;
-        double milk = 0,cream=0,compressedAir=0,coffee=0;
+        String coffeeName = null;
+        double milk = 0, cream = 0, compressedAir = 0, coffee = 0;
 
         switch (numberCoffee) {
             case 1 -> {
