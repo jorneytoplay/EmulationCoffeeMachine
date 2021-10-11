@@ -4,6 +4,9 @@ package CoffeeMachine.ProcessesMakingCoffee;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+/**
+ * This class calculates the required resources to create coffee
+ */
 public class Shaper extends LoadingCoffeeList { //Класс-сборщик, достающий наименование кофе и ведёт подсчёт затрат денег и ресурсов
     MakeCoffee makeCoffee = new MakeCoffee();
 

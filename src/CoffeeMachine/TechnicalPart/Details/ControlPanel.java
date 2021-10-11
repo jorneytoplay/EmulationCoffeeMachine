@@ -1,6 +1,6 @@
 package CoffeeMachine.TechnicalPart.Details;
 
-public class ControlPanel implements Electronics{ //Панель управления
+public class ControlPanel implements Electronics{ //Control Panel
     @Override
     public String toString() {
         return "Control panel is operational ☑";

@@ -6,16 +6,26 @@ import CoffeeMachine.TechnicalPart.TechnicalScanner;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * @author jorneytoplay [ Memedlyaev Ekrem ]
+ */
 public class Main {
-
+    /**
+     *This method simulates the start of the coffee machine and,
+     * upon successful start, creates a link to
+     * CoffeeMachine and goes to the coffeeMachine.start() method
+     */
     public static void main(String[] args) throws IOException {
         CoffeeMachineResources specifications = new CoffeeMachineResources();
         TechnicalScanner techScan = new TechnicalScanner();
         try {
             System.out.println("...The coffee machine starts up...");
-            techScan.scan(); //Подключаем и проверяет на работоспособность все комплектубщие кофемашины
-            specifications.showsResources(); //Выводим доступные ресурсы в кофемашине
-            TimeUnit.SECONDS.sleep(3); //Эмулируем задержку в проверке
+            //We connect and check for operability of all complementary coffee machines
+            techScan.scan();
+            //Displaying the available resources in the coffee machine
+            specifications.showsResources();
+            //Emulating a delay in validation
+            TimeUnit.SECONDS.sleep(3);
             CoffeeMachine coffeeMachine = new CoffeeMachine();
             System.out.println("☑Welcome☑");
             coffeeMachine.start(); //Запускаем панель управления

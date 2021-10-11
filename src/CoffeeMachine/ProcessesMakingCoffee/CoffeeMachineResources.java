@@ -6,6 +6,9 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Properties;
 
+/**
+ * This class list the resources of the coffee machine and spends them (soon)
+ */
 public class CoffeeMachineResources { //Класс конструктор выводящий список ресурсов
     Properties prop = new Properties();
     HashMap<String, Integer> resources = new HashMap<>();

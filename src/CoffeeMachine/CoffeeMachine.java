@@ -8,6 +8,11 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ * This class describes the interaction between
+ * the user and the coffee machine.Asking what the user wants,
+ * the coffee machine offers to create coffee and select coffee
+ */
 public class CoffeeMachine {
     Scanner scanner = new Scanner(System.in);
     AdministratorMode admin = new AdministratorMode();
@@ -20,7 +25,7 @@ public class CoffeeMachine {
     }
 
     public void start() throws IOException {
-        while (true){
+        while (true) {
             System.out.println("What do you want? (Select number)\n" +
                     "1.Make coffee\n" +
                     "2.Administrator Mode");
@@ -35,9 +40,9 @@ public class CoffeeMachine {
             } else {
                 System.out.println("Try again");
             }
-
+            //If the user entered the correct password, then let him into the administrator mode (REFINE)
             if (adminMode) {
-                adminPanel.startPanel();//Если пользватель ввёл верный пароль то впустить в режим администратора ( ДОРАБОТАТЬ )
+                adminPanel.startPanel();
             }
 
         }

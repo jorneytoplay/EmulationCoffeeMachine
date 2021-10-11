@@ -1,6 +1,6 @@
 package CoffeeMachine.TechnicalPart.Details;
 
-public class Piston implements Electronics{ //Поршень для сдавливания кофе
+public class Piston implements Electronics{ //Coffee squeeze piston
     @Override
     public String toString() {
         return "Piston is operational ☑";

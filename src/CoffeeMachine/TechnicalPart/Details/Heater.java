@@ -1,6 +1,6 @@
 package CoffeeMachine.TechnicalPart.Details;
 
-public class Heater implements Electronics{ //Нагреватель
+public class Heater implements Electronics{ //Heater
     @Override
     public String toString() {
         return "Heater is operational ☑";

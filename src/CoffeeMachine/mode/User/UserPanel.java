@@ -7,6 +7,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ * This class requests a list of coffee and
+ * waits for the user to select a coffee and its size.
+ */
 public class UserPanel {
     ShowActionsList showActionsList = new ShowActionsList();
     Shaper shaper = new Shaper();

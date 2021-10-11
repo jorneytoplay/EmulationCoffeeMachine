@@ -6,7 +6,15 @@ import CoffeeMachine.TechnicalPart.Details.Piston;
 
 import java.util.concurrent.TimeUnit;
 
-public class TechnicalScanner { //Проверка всех комплектющихся кофемашины на сбой
+/**
+ * This class was created to check the
+ * readiness of the coffee machine components.
+ */
+public class TechnicalScanner {
+    /**
+     * the scan method is waiting for a response from
+     * all the components of the coffee machine
+     */
     public void scan() throws InterruptedException {
         System.out.println("...Technical analysis...");
         TimeUnit.SECONDS.sleep(2);

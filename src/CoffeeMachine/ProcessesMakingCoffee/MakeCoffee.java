@@ -7,6 +7,9 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * This class creates coffee and spends the resources of the coffee machine
+ */
 public class MakeCoffee {
     Properties prop = new Properties();
     FileInputStream in = new FileInputStream("C:\\Users\\71376160\\IdeaProjects\\EmulationCoffeeMachine\\src\\CoffeeMachine\\resources.properties");
@@ -14,6 +17,10 @@ public class MakeCoffee {
     public MakeCoffee() throws FileNotFoundException {
     }
 
+    /**
+     * This method emulates the creation of coffee and
+     * all the processes that take place.
+     */
     public void make(String coffeeName, int price) throws IOException {
         prop.load(in);
         System.out.println("Coffee:" + coffeeName + " Price:" + price + "₽");
@@ -26,6 +33,12 @@ public class MakeCoffee {
         }
     }
 
+    /**
+     * Calculates the remaining resources of the espresso machine
+     * after the coffee has been created
+     *
+     * @param coffee - type coffee
+     */
     public void eatingUpResources(double milk, double cream, double compressedAir, double coffee) throws FileNotFoundException {
         CoffeeMachineResources coffeeMachineResources = new CoffeeMachineResources();
         try {
@@ -47,6 +60,12 @@ public class MakeCoffee {
         }
     }
 
+    /**
+     * This method changes the amount of resources of the coffee machine
+     * after the coffee has been created.
+     *
+     * @param p - machine resource data
+     */
     public void saveProperties(Properties p) throws IOException {
         FileOutputStream fr = new FileOutputStream("C:\\Users\\71376160\\IdeaProjects\\EmulationCoffeeMachine\\src\\CoffeeMachine\\resources.properties");
         p.store(fr, "Properties");
