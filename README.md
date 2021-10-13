@@ -1,5 +1,5 @@
 Проект эмулирующийц работу кофемашины.
-Стадии "включения кофемашины":
+<br>Стадии "включения кофемашины":</br>
 
 <details>
   <summary>
@@ -30,7 +30,7 @@
    4.Выбор кофе и объёма с последующим подсчётом затрат на ресурсы и выставления ценника для данного кофе
   </summary>
   *Все процессы имеют задержку для более точной эмуляции работы кофемашины*
-  Каждая комплектующая имеют свою напряженность и частоту
+  <br>Каждая комплектующая имеют свою напряженность и частоту</br>
 <br><img src="https://github.com/jorneytoplay/EmulationCoffeeMachine/blob/master/pic/3.png" width="250" /></br>
 <br><img src="https://github.com/jorneytoplay/EmulationCoffeeMachine/blob/master/pic/4.png" width="250" /></br>
   </details>
